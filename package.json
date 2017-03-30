@@ -26,7 +26,8 @@
     "yargs": "*",
     "gulp-if": "*",
     "gulp-sourcemaps": "*",
-    "gulp-uglify": "*"
+    "gulp-uglify": "*",
+    "jshint": "*"
   },
   "devDependencies": {
     "jasmine-core": "^2.5.2",
