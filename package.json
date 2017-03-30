@@ -1,21 +1,21 @@
 {
-  "name": "engineering-career-fair",
-  "version": "0.2.0",
-  "description": "An app for the Engineering Career Fair",
+  "name": "engineering-expo",
+  "version": "0.1.0",
+  "description": "An app for the Engineering Expo at UW-Madison",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kmfischer3/Engineering_Career_Fair.git"
+    "url": "git+https://github.com/kmfischer3/engineering-expo.git"
   },
   "author": "Kristina Fischer",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/kmfischer3/Engineering_Career_Fair/issues"
+    "url": "https://github.com/kmfischer3/engineering-expo/issues"
   },
-  "homepage": "https://github.com/kmfischer3/Engineering_Career_Fair#readme",
+  "homepage": "https://github.com/kmfischer3/engineering-expo#readme",
   "dependencies": {
     "gulp": "*",
     "gulp-concat": "*",
@@ -26,7 +26,8 @@
     "yargs": "*",
     "gulp-if": "*",
     "gulp-sourcemaps": "*",
-    "gulp-uglify": "*"
+    "gulp-uglify": "*",
+    "jshint": "*"
   },
   "devDependencies": {
     "jasmine-core": "^2.5.2",

@@ -11,7 +11,7 @@ function Company(id, name, website, description, attributes, tables) {
 }
 
 /**
- * Returns true if the company attends the career fair on the given day
+ * Returns true if the exhibit is present on the given day
  * index. Returns false otherwise.
  */
 Company.prototype.attends_on_day = function(day) {
