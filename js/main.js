@@ -17,19 +17,21 @@ $(document).ready(function() {
             company_ids: filter_by_day(DEFAULT_DAY_ID)
         });
     });
-
     $("#list-button").click(function() {
         view('display_companies_list', {
             day: DEFAULT_DAY_ID,
             company_ids: filter_by_day(DEFAULT_DAY_ID)
         });
     });
-    $("#favorites-button").click(function() {
-        view('favorites_page', null);
+    $("#maps-button").click(function() {
+        view('maps_page', null);
     });
     $("#info-button").click(function() {
         view('info_page', null);
     });
+    $(".dropdown-menu > li > a").click(function() {
+        view('switch_map', $(this).attr("value"));
+    });    
 
     search_init();
 });
