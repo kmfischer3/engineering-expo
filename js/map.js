@@ -40,12 +40,19 @@ map.highlightCompanies = function(options) {
  * Load the map files in the background.
  */
 map.loadMaps = function() {
-    $("#map_svg_0").load("/static/maps/square_map0.svg");
-    $("#map_svg_1").load("/static/maps/square_map1.svg");
-    $("#map_svg_2").load("/static/maps/square_map2.svg");
-    $("#map_svg_3").load("/static/maps/square_map3.svg");
-    $("#map_svg_4").load("/static/maps/square_map4.svg");
-    $("#map_svg_5").load("/static/maps/square_map5.svg");
+    var map_svgs = $("#map_svgs");
+    
+    for (var i = 0; i < MAP_METADATA_NAMES.length; i++) {
+        var elm = $("<div/>", {
+            id: "map_svg_" + i.toString(),
+            class: "map_svg",
+            appendTo: map_svgs
+        }).load("/static/maps/" + MAP_METADATA_NAMES[i]);
+
+        if (i > 0) {
+            elm.addClass('hidden');
+        }
+    }
 };
 
 /*
@@ -54,4 +61,13 @@ map.loadMaps = function() {
 map.showMap = function(day) {
     $(".map_svg").addClass("hidden");
     $("#map_svg_" + day.toString()).removeClass("hidden");
+};
+
+/*
+ * Return the index of the filename in the MAP_METADATA_NAMES array.
+ * This will also be the number of the map div. Ex: #map_svg_0.
+ * Will return -1 if the filename is not found in the array.
+ */
+map.mapFileNameToIndex = function(filename) {
+    return MAP_METADATA_NAMES.index(filename);
 };
