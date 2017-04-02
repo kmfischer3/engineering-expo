@@ -1,6 +1,17 @@
 // BitPack constants
-var BITPACK_DEGREES_EMPTY = new BitPack('AAAAAAAAAAAAAAAAAAAAAAA=');
-var BITPACK_DEGREES_ALL = new BitPack('//////////////////////8=');
+var BITPACK_ATTRIBUTES_EMPTY = new BitPack('AA==');
+var BITPACK_ATTRIBUTES_ALL = new BitPack('Dw==');
+
+var ATTRIBUTES = ['student_exhibit', 'competition', 'speaker', 'industry'];
+var ATTRIBUTE_INDEXES = {
+    'student_exhibit': 7,
+    'competition': 6,
+    'speaker': 5,
+    'industry': 4
+};
+
+var BITPACK_DEGREES_EMPTY = new BitPack('AA==');
+var BITPACK_DEGREES_ALL = new BitPack('Dw==');
 var BITPACK_WORK_AUTH_EMPTY = new BitPack('AA==');
 var BITPACK_WORK_AUTH_ALL = new BitPack('8A==');
 

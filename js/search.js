@@ -12,16 +12,38 @@ function search_init() {
 
     $( "#filter" ).submit(function( event ) {
 
-        var degree_masks = encode_degree_input();
-        var position_mask = encode_position_input();
-        var citizenship_mask = encode_citizenship_input();
+        var attribute_mask = encode_attribute_input();
         var day = get_day_input();
+        
+        // TODO: consider moving/removing this collapse
         $('#navbar-collapse-1').collapse('hide');
-        var view_options = filter_companies(degree_masks, position_mask, citizenship_mask, day);
-        //display_companies_map(view_options);
+        
+        var view_options = filter_exhibits(attribute_mask, day);
         view("display_companies_list", view_options);
         event.preventDefault();
     });
+}
+
+function encode_attribute_input() {
+    var filters = document.getElementById("filter");
+
+    var bitpack = BITPACK_ATTRIBUTES_EMPTY.slice(0);
+    var attribute_selected = false;
+
+    ATTRIBUTES.forEach(function(attribute) {
+        var attribute_index = ATTRIBUTE_INDEXES[attribute];
+        if (filters.elements[attribute + '_input'].checked) {
+            attribute_selected = true;
+            bitpack.setBit(attribute_index, true);
+        }
+    });
+
+    // If no option checked, don't filter on this field.
+    if (!attribute_selected) {
+        return BITPACK_ATTRIBUTES_ALL.slice(0);
+    }
+
+    return bitpack;
 }
 
 function encode_degree_input() {
@@ -121,6 +143,31 @@ function filter_by_day(day) {
     results.sort(utils.sort_companies);
 
     return results;
+}
+
+function filter_exhibits(attribute_pack, day) {
+    console.log({
+        attribute_pack: attribute_pack,
+        day: day
+    });
+
+    var results = [];
+    for (var company_id in data) {
+        var company = data[company_id];
+        if (company.attributes.boolAnd(attribute_pack)) {
+            results.push(company_id);
+        }
+    }
+
+    results.sort(utils.sort_companies);
+
+    var view_options = {
+        day: day,
+        company_ids: results,
+        source: SOURCE_FILTER
+    };
+
+    return view_options;
 }
 
 function filter_companies(degree_pack, position_pack, authorization_pack, day) {
