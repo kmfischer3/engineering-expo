@@ -80,3 +80,10 @@ describe('Company.get_work_authorization()', () => {
         );
     });
 });
+
+describe('Company.get_tags()', () => {
+    it('should return ["student_exhibit"] when the student exhibit bit is set', () => {
+        var company = new Company('a', 'a', 'a', 'a', 'AQ==', []);
+        expect(company.get_tags()).toEqual(['student_exhibit']);
+    });
+});

@@ -78,3 +78,15 @@ Company.prototype.get_work_authorization = function() {
 
     return response.join(', ');
 };
+
+Company.prototype.get_tags = function() {
+    var response = [];
+
+    var self = this;
+    ATTRIBUTES.forEach(function(attribute) {
+        if (self.attributes.bitAt(ATTRIBUTE_INDEXES[attribute]))
+            response.push(attribute);
+    });
+
+    return response;
+};
