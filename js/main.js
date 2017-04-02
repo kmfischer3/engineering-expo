@@ -8,10 +8,7 @@ $(document).ready(function() {
     view("display_companies_list", view_options);
 
     // attach events to buttons
-    $("#search-button-mobile").click(function() {
-        view('search_page', null);
-    });
-    $("#search-button-desktop").click(function() {
+    $("#search-button").click(function() {
         view('search_page', null);
     });
     $("#home-button").click(function() {
@@ -20,6 +17,21 @@ $(document).ready(function() {
             company_ids: filter_by_day(DEFAULT_DAY_ID)
         });
     });
+    $("#list-button").click(function() {
+        view('display_companies_list', {
+            day: DEFAULT_DAY_ID,
+            company_ids: filter_by_day(DEFAULT_DAY_ID)
+        });
+    });
+    $("#maps-button").click(function() {
+        view('maps_page', null);
+    });
+    $("#info-button").click(function() {
+        view('info_page', null);
+    });
+    $(".dropdown-menu > li > a").click(function() {
+        view('switch_map', $(this).attr("value"));
+    });    
 
     search_init();
 });
