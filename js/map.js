@@ -76,7 +76,7 @@ map.mapFileNameToIndex = function(filename) {
  * Return the index of the map containing the given table id.
  * Returns -1 if the map could not be determined.
  */
-map.tableIdToMapIndex = function(tabeid) {
+map.tableIdToMapIndex = function(tableid) {
     for (var i = 0; i < MAP_METADATA_NAMES.length; i++) {
         if (tableid >= MAP_METADATA_STARTS[i] &&
             tableid < MAP_METADATA_STARTS[i+1]) {
