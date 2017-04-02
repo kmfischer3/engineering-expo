@@ -27,7 +27,9 @@
     "gulp-if": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
-    "jshint": "*"
+    "jshint": "*",
+    "gulp-run": "*",
+    "gulp-rename": "*"
   },
   "devDependencies": {
     "jasmine-core": "^2.5.2",
