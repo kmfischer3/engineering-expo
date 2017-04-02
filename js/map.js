@@ -64,15 +64,6 @@ map.showMap = function(day) {
 };
 
 /*
- * Return the index of the filename in the MAP_METADATA_NAMES array.
- * This will also be the number of the map div. Ex: #map_svg_0.
- * Will return -1 if the filename is not found in the array.
- */
-map.mapFileNameToIndex = function(filename) {
-    return MAP_METADATA_NAMES.index(filename);
-};
-
-/*
  * Return the index of the map containing the given table id.
  * Returns -1 if the map could not be determined.
  */
