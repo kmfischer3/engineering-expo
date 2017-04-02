@@ -9,6 +9,12 @@ var ATTRIBUTE_INDEXES = {
     'speaker': 5,
     'industry': 4
 };
+var ATTRIBUTE_STRINGS = {
+    'student_exhibit': 'Student Exhibit',
+    'competition': 'Competition',
+    'speaker': 'Speaker',
+    'industry': 'Industry'
+};
 
 var BITPACK_DEGREES_EMPTY = new BitPack('AA==');
 var BITPACK_DEGREES_ALL = new BitPack('Dw==');

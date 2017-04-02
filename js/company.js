@@ -85,7 +85,8 @@ Company.prototype.get_tags = function() {
     var self = this;
     ATTRIBUTES.forEach(function(attribute) {
         if (self.attributes.bitAt(ATTRIBUTE_INDEXES[attribute]))
-            response.push(attribute);
+            // convert attribute to string before returning
+            response.push(ATTRIBUTE_STRINGS[attribute]);
     });
 
     return response;
