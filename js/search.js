@@ -220,17 +220,7 @@ function filter_companies(degree_pack, position_pack, authorization_pack, day) {
 
 function get_day_input() {
 
-    if ( document.getElementById("day0").checked ) {
-        return 0;
-    }
-    if ( document.getElementById("day1").checked ) {
-        return 1;
-    }
-    if ( document.getElementById("day2").checked ) {
-        return 2;
-    }
-
-    return -1;
+    return DEFAULT_DAY_ID;
 
 }
 
