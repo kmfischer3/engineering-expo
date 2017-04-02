@@ -67,8 +67,9 @@ gulp.task('build_maps', tasks.build_maps = function() {
     gulp.src(MAPS_BLOB)
         .pipe(svgmin({
             plugins: [{
-                mergePaths: false,
                 cleanupIDs: false
+            }, {
+                mergePaths: false
             }]
         }))
         .pipe(gulp.dest('build/static/maps/'));
