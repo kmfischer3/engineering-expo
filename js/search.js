@@ -132,18 +132,6 @@ function filter_companies(degree_pack, position_pack, authorization_pack, day) {
         day: day
     });
 
-    /*
-    if (degree_masks[0] === -1 && degree_masks[1] === -1 && degree_masks[2] === -1 &&
-        degree_masks[3] === -1 && degree_masks[4] === -1 && degree_masks[5] === -1 &&
-        position_mask === -1 && citizenship_mask === -1) {
-        return {
-            day: day,
-            company_ids: filter_by_day(day),
-            source: SOURCE_FILTER
-        };
-    }
-    */
-
     // Combine position and degree masks
     var degree_position_pack = degree_pack.and(position_pack);
 
