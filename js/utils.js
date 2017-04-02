@@ -58,10 +58,10 @@ function get_filter_string() {
 	var filters = document.getElementById("filter");
     var ret_array = [];
 
-    MAJORS.forEach(function(major) {
-        var major_index = MAJOR_INDEXES[major];
-        if (filters.elements[major + '_input'].checked) {
-            ret_array.push(major);
+    ATTRIBUTES.forEach(function(attribute) {
+        var attribute_index = ATTRIBUTE_INDEXES[attribute];
+        if (filters.elements[attribute + '_input'].checked) {
+            ret_array.push(attribute);
         }
     });
 

@@ -49,67 +49,13 @@ var views = {
             }
         }
 
-        // construct degree-position table
-        // if the company's degree_mask_# has anything other than '0000' for a given major, add that major to the table
-        // then, use (degree_mask & position_mask) to place the checkmark in the appropriate column
-        var table_body = '<tbody>';
-
-
-        // Populate table with degree information
-        var major_info_found = false;
-        var major_data = company.attributes.slice(MAJOR_DATA_INDEX);
-        MAJORS.forEach(function(major) {
-            var table_row = '<tr><th scope="row">' + major + '</th>';
-            var check_added = false;
-
-            POSITION_OFFSETS.forEach(function(position_offset) {
-
-                if (major_data.bitAt(MAJOR_INDEXES[major] + position_offset)) {
-                    check_added = true;
-                    major_info_found = true;
-                    table_row += '<td><span class="glyphicon glyphicon-ok"></span></td>';
-                } else {
-                    table_row += '<td></td>';
-                }
-            });
-
-            table_row += '</tr>';
-
-            if (check_added) {
-                table_body += table_row;
-            }
+        // Populate tags
+        var tag_html = '';
+        company.get_tags().forEach(function(tag) {
+            tag_html += '<span class="label label-default">' + tag + '</span>';
         });
+        $("#company_tags").html(tag_html);
 
-        table_body += '</tbody>';
-
-
-        // If no major info found, display message "No info submitted"
-        if (!major_info_found) {
-        	table_body = '<tbody><tr><td colspan="5">No info submitted</td></tr></tbody>';
-        }
-
-
-        // insert the table body into the rest of the table html
-        var table_data = '\
-          <table class="table">\
-            <thead>\
-              <tr>\
-                <th></th>\
-                <th>Intern</th>\
-                <th>Co-op</th>\
-                <th>Entry Level</th>\
-                <th>Experienced</th>\
-              </tr>\
-            </thead>\
-          '+table_body+'\
-          </table>\
-          ';
-
-        // populate the table div with the table created above
-        $("#company_profile_degree_position_table").html(table_data);
-
-        // populate work authorization requirements
-        $("#company_profile_citizenship").html('<h4>Work authorization: <small> ' + company.get_work_authorization() + '</small></h4>');
 
         $(".view").addClass('hidden');
         $("#company_profile").removeClass('hidden');
@@ -155,11 +101,11 @@ var views = {
             $("#show_on_map_button")
                 .off()
                 .click(
-                  view_options
-                  , function(e) {
-                    view("display_companies_map", e.data);
-                    e.preventDefault();
-                })
+                    view_options,
+                    function(e) {
+                        view("display_companies_map", e.data);
+                        e.preventDefault();
+                    })
                 .show();
         } else {
           $("#show_on_map_button").hide();
