@@ -202,6 +202,11 @@ var views = {
     },
 
     maps_page: function() {
+        map.resetTables(DEFAULT_DAY_ID);
+        map.showMap(DEFAULT_DAY_ID);
+        $("#map_view_title").text(get_map_string(DEFAULT_MAP_ID));
+        $("#map_view_header_filter_list").hide();
+
         $(".view").addClass("hidden");
         $("#map_view").removeClass("hidden");
     },
