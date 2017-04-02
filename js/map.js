@@ -71,3 +71,19 @@ map.showMap = function(day) {
 map.mapFileNameToIndex = function(filename) {
     return MAP_METADATA_NAMES.index(filename);
 };
+
+/*
+ * Return the index of the map containing the given table id.
+ * Returns -1 if the map could not be determined.
+ */
+map.tableIdToMapIndex = function(tabeid) {
+    for (var i = 0; i < MAP_METADATA_NAMES.length; i++) {
+        if (tableid >= MAP_METADATA_STARTS[i] &&
+            tableid < MAP_METADATA_STARTS[i+1]) {
+            return i;
+        }
+    }
+
+    console.log('Could not find map file for tableid: ' + tableid.toString());
+    return -1;
+};

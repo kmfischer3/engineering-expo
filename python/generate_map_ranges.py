@@ -74,10 +74,9 @@ starts = list(map_files_by_start.keys())
 starts.sort()
 names = [map_files_by_start[start] for start in starts]
 # Add the end of the last range for comparison
-starts += [metadata[map_files_by_start[starts[-1]]]['tables']['end']]
+starts += [metadata[map_files_by_start[starts[-1]]]['tables']['end'] + 1]
 
-print('''
-var MAP_METADATA_STARTS = {starts};
+print('''var MAP_METADATA_STARTS = {starts};
 var MAP_METADATA_NAMES = {names};
 '''.format(**{
     'starts': json.dumps(starts),

@@ -28,7 +28,7 @@ gulp.task('lint', tasks.lint = function() {
         .pipe(jshint.reporter('default'));
 });
 
-gulp.task('build_js', tasks.build_js = function() {
+gulp.task('build_js', ['build_maps:metadata'], tasks.build_js = function() {
     gulp.src(JS_BLOB)
         .pipe(sourcemaps.init())
         .pipe(concat('scripts.js'))
