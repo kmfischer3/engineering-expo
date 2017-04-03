@@ -176,7 +176,7 @@ var views = {
             day: view_options.day
         });
         map.showMap(view_options.day);
-        $("#map_view_title").text(get_day_string(view_options.day));
+        $("#map_view_title").text(get_map_string(view_options.day));
 
         // Add a heading to the view
         if ("source" in view_options) {

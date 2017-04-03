@@ -14,11 +14,15 @@ map.resetTables = function(day) {
 };
 
 map.highlightTables = function(day, table_ids) {
+
     table_ids.forEach(function(table_id) {
+
 	    var table = document.getElementById("table" + table_id.toString());
         console.assert(table != null, "Table with id=%i does not exist.", table_id);
 	    table.classList.add("highlight");
-    });
+
+    });  
+
 };
 
 /*
@@ -30,10 +34,34 @@ map.highlightTables = function(day, table_ids) {
 map.highlightCompanies = function(options) {
     map.resetTables(options.day);
 
+    // initialize map result counts
+    var map_results_count = {};
+    for (var i = 0; i < MAP_METADATA_NAMES.length; i++)
+        map_results_count[i] = 0;    
+
     options.company_ids.forEach(function(company_id, index, array) {
         var company = data[company_id];
-        map.highlightTables(options.day, company.tables_on_day(options.day));
+        var tables_on_day = company.tables_on_day(options.day);
+        map.highlightTables(options.day, tables_on_day);
+
+        // increment result count for the map containing table id
+        for (var j = 0; j < tables_on_day.length; j ++){
+            map_results_count[map.tableIdToMapIndex(tables_on_day[j])] ++;
+        }
+
     });
+
+    // fill badges on map dropdown with results count
+    for (var key in map_results_count){
+
+        if (map_results_count[key] == '0')
+            continue;
+
+        var id = "#badge" + key.toString();
+        $(id).text(map_results_count[key]);
+
+    } 
+
 };
 
 /*

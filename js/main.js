@@ -23,6 +23,7 @@ $(document).ready(function() {
         });
     });
     $("#maps-button").click(function() {
+        clear_badges(); // this is the only view change that requires a badge reset
         view('maps_page', null);
     });
     $("#info-button").click(function() {

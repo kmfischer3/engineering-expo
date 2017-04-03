@@ -22,6 +22,11 @@ utils.sort_companies = function(a, b) {
         return 0;
 };
 
+// clears/resets all the badges in the map dropdown
+function clear_badges(){
+    $('.badge').text('');    
+}
+
 function get_day_string(day) {
 
     if ( day == 0 )
@@ -37,7 +42,7 @@ function get_day_string(day) {
 function get_map_string(map) {
 
     if ( map == 0 )
-        return "Engineering Campus / Outdoor Map";
+        return "Outdoor Map";
     if ( map == 1 )
         return "Engineering Hall (EH) 1st Floor";
     if ( map == 2 )
