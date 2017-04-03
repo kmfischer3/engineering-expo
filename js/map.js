@@ -1,6 +1,6 @@
 var map = {
     MIN_TABLE_NUMBER: 0,
-    MAX_TABLE_NUMBER: 87  // TODO: update
+    MAX_TABLE_NUMBER: 75  // TODO: update
 };
 
 map.resetTables = function(day) {
