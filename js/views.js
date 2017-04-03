@@ -63,6 +63,8 @@ var views = {
 
         $(".view").addClass('hidden');
         $("#company_profile").removeClass('hidden');
+
+        track.piwik_page('/profile/' + company_id.toString(), 'Profile: ' + company.name);
     },
 
     /*
@@ -139,6 +141,24 @@ var views = {
         // Display the view
         $(".view").addClass("hidden");
         $("#company_list_view").removeClass("hidden");
+
+        console.log(view_options);
+        // Do not need to track home visit
+        if (!('home' in view_options) || view_options.home !== true) {
+            switch(view_options.source) {
+            case SOURCE_FILTER:
+                track.piwik_page('/search/filter', 'Filter: ');  // TODO: get filter string
+                break;
+            case SOURCE_SEARCH:
+                track.piwik_page('/search/search', 'Search: ' + $("#searchterm").val());
+                _paq.push(['trackSiteSearch', $("#searchterm").val(), false, view_options.company_ids.length]);
+                break;
+            default:
+                track.piwik_page('/', 'Engineering Expo');
+            }
+        }
+
+        
     },
 
     /*
@@ -173,6 +193,9 @@ var views = {
 
         $(".view").addClass("hidden");
         $("#map_view").removeClass("hidden");
+
+        track.piwik_page('/maps/' + view_options.day.toString() + '/highlight',
+                         'Maps: ' + get_map_string(view_options.day.toString()) + ' - Highlighted');
     },
 
     load_companies: function() {
@@ -198,11 +221,16 @@ var views = {
 
         $(".view").addClass("hidden");
         $("#map_view").removeClass("hidden");
+
+        track.piwik_page('/maps/' + options.map.toString() + '/highlight',
+                         'Maps: ' + get_map_string(options.map) + ' - Highlighted');
     },
 
     search_page: function() {
         $(".view").addClass("hidden");
         $("#search_and_filter").removeClass("hidden");
+
+        track.piwik_page('/search/', 'Search');
     },
 
     maps_page: function() {
@@ -213,6 +241,8 @@ var views = {
 
         $(".view").addClass("hidden");
         $("#map_view").removeClass("hidden");
+
+        track.piwik_page('/maps/', 'Maps');
     },
 
     switch_map: function(map_id) {
@@ -225,11 +255,16 @@ var views = {
 
         $(".view").addClass("hidden");
         $("#map_view").removeClass("hidden");
+
+        track.piwik_page('/maps/' + map_id.toString() + '/',
+                         'Maps: ' + get_map_string(map_id));
     },     
 
     info_page: function() {
         $(".view").addClass("hidden");
         $("#info").removeClass("hidden");
+
+        track.piwik_page('/info/', 'Info');
     }
 
 
