@@ -1,9 +1,12 @@
+#! /usr/bin/env python3
 import os
 import sys
 import json
 import lxml.etree
 
 MAPS_DIR = './static/maps/'
+OUTPUT_DIRECTORY = './js/dynamic'
+OUTPUT_FILE = os.path.join(OUTPUT_DIRECTORY, 'map_ranges.js')
 metadata = {}
 
 for map_file_name in os.listdir(MAPS_DIR):
@@ -68,6 +71,10 @@ for i in range(0, len(table_found)):
               i + min_table_id, file=sys.stderr)
         exit(1)
 
+# Create output directory if necessary
+if not os.path.exists(OUTPUT_DIRECTORY):
+    os.makedirs(OUTPUT_DIRECTORY)
+
 # Output JavaScript metadata file
 map_files_by_start = {metadata[x]['tables']['start']: x for x in metadata}
 starts = list(map_files_by_start.keys())
@@ -76,9 +83,12 @@ names = [map_files_by_start[start] for start in starts]
 # Add the end of the last range for comparison
 starts += [metadata[map_files_by_start[starts[-1]]]['tables']['end'] + 1]
 
-print('''var MAP_METADATA_STARTS = {starts};
+output = '''var MAP_METADATA_STARTS = {starts};
 var MAP_METADATA_NAMES = {names};
 '''.format(**{
     'starts': json.dumps(starts),
     'names': json.dumps(names)
-    }))
+    })
+
+with open(OUTPUT_FILE, 'w') as outf:
+    outf.write(output)
