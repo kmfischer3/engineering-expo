@@ -75,9 +75,7 @@ gulp.task('build_maps', tasks.build_maps = function() {
         .pipe(gulp.dest('build/static/maps/'));
 });
 gulp.task('gen_maps_metadata', tasks.gen_maps_metadata = function() {
-    run('python3 python/generate_map_ranges.py').exec()
-        .pipe(rename('map_ranges.js'))
-        .pipe(gulp.dest('js/dynamic/'));
+    run('python3 python/generate_map_ranges.py').exec();
 });
 gulp.task('build_maps:metadata', ['gen_maps_metadata'], tasks.build_maps);
 
