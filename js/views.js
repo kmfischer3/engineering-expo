@@ -24,12 +24,16 @@ var views = {
 
         // create day_company_booth list with buttons to trigger the map view with the corresponding booth highlighted
         function create_link(table_ids, day) {
+
+            var map_id = map.tableIdToMapIndex(table_ids[0]);
+
             return $("<a/>", {
                 href: "#",
                 class: "list-group-item"})
                 .click(
                     {
                         table_ids: table_ids,
+                        map: map_id,
                         day: day
                     },
                     function(e) {
@@ -37,7 +41,7 @@ var views = {
                         e.preventDefault();
                     })
                 .html('<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>' +
-                      get_day_string(day) +
+                      get_map_string(map_id) +
                       '<span class="glyphicon glyphicon-menu-right pull-right"></span>');
         }
 
@@ -188,8 +192,8 @@ var views = {
     view_map_highlight_table: function(options) {
         map.resetTables(options.day);
         map.highlightTables(options.day, options.table_ids);
-        map.showMap(options.day);
-        $("#map_view_title").text(get_day_string(options.day));
+        map.showMap(options.map);
+        $("#map_view_title").text(get_map_string(options.map));
         $("#map_view_header_filter_list").hide();
 
         $(".view").addClass("hidden");

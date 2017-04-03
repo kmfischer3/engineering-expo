@@ -58,9 +58,9 @@ map.loadMaps = function() {
 /*
  * Show the correct map for a given day, hiding the others.
  */
-map.showMap = function(day) {
+map.showMap = function(map) {
     $(".map_svg").addClass("hidden");
-    $("#map_svg_" + day.toString()).removeClass("hidden");
+    $("#map_svg_" + map.toString()).removeClass("hidden");
 };
 
 /*
