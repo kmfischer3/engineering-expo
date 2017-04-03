@@ -248,12 +248,8 @@ var views = {
     },
 
     switch_map: function(map_id) {
-        //map.resetTables(options.map);
-        //map.resetAllTables();
-        //map.highlightTables(options.map, options.table_ids);
         map.showMap(map_id);
         $("#map_view_title").text(get_map_string(map_id));
-        $("#map_view_header_filter_list").hide();
 
         $(".view").addClass("hidden");
         $("#map_view").removeClass("hidden");
