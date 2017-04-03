@@ -102,8 +102,10 @@ var views = {
         // Add the results to the DOM
         $("#company_list").empty().append(div);
 
-        // Add the "show on map" button when results are tied to a day
-        if ("day" in view_options) {
+        // Add the "show on map" button when the user has filtered
+        if ( ("source" in view_options) && 
+                          (view_options.source == SOURCE_FILTER) && 
+                          (view_options.company_ids.length !== 0) ) {
             $("#show_on_map_button")
                 .off()
                 .click(
