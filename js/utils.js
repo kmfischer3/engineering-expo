@@ -61,7 +61,7 @@ function get_filter_string() {
     ATTRIBUTES.forEach(function(attribute) {
         var attribute_index = ATTRIBUTE_INDEXES[attribute];
         if (filters.elements[attribute + '_input'].checked) {
-            ret_array.push(attribute);
+            ret_array.push(ATTRIBUTE_STRINGS[attribute]);
         }
     });
 
