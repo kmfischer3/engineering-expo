@@ -18,7 +18,7 @@ function search_init() {
         // TODO: consider moving/removing this collapse
         $('#navbar-collapse-1').collapse('hide');
         
-        var view_options = filter_exhibits(attribute_mask, day);
+        var view_options = filter_exhibits(attribute_mask, day, false);
         view("display_companies_list", view_options);
         event.preventDefault();
     });
@@ -145,7 +145,8 @@ function filter_by_day(day) {
     return results;
 }
 
-function filter_exhibits(attribute_pack, day) {
+function filter_exhibits(attribute_pack, day, defaultBehavior = true) {
+
     console.log({
         attribute_pack: attribute_pack,
         day: day
@@ -161,10 +162,15 @@ function filter_exhibits(attribute_pack, day) {
 
     results.sort(utils.sort_companies);
 
+    // show-on-map button will display if SOURCE_FILTER, not SOURCE_DEFAULT
+    var source = SOURCE_FILTER;
+    if (defaultBehavior)
+        source = SOURCE_DEFAULT;
+
     var view_options = {
         day: day,
         company_ids: results,
-        source: SOURCE_FILTER
+        source: source
     };
 
     return view_options;
