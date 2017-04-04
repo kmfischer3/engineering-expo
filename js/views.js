@@ -4,7 +4,7 @@ var views = {
 
         // display the company name in the jumbotron div
         $("#company_profile_name").text(company.name);    // display the company description
-        $("#company_profile_description > h4").text("About " + company.name);
+        //$("#company_profile_description > h4").html("<span class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></span> About ");
         $("#company_profile_description_text").text("Loading, please wait...");
 
         // Asynchronously load the profile description
@@ -16,10 +16,18 @@ var views = {
         });
 
         // display the company website. If no website, then hide the link
-        if ( company.website != null ) {
-            $( "#company_profile_website" ).attr('href', company.website).show();
+        if ( company.website ) {
+            $( "#company_profile_website" ).attr('href', company.website).attr('target', '_blank').show();
         } else {
             $( "#company_profile_website" ).hide();
+        }
+
+        // display the exhibit speaker time(s) string under the exhibit name
+        company.speakertimes = 'Friday at 11am';
+        if ( company.speakertimes ) {
+            $( "#company_profile_speakertimes" ).html('<small>'+company.speakertimes+'</small>');
+        } else {
+            $( "#company_profile_speakertimes" ).hide();
         }
 
         // create day_company_booth list with buttons to trigger the map view with the corresponding booth highlighted
