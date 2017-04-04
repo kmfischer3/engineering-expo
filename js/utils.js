@@ -27,6 +27,20 @@ function clear_badges(){
     $('.badge').text('');    
 }
 
+function get_company_for_table(table_id) {
+
+    for (var company_id in data) {
+        company = data[company_id];
+        for (var i = 0; i < company.tables.length; i ++) {
+            if (table_id == company.tables[i])
+                return company;
+        }
+    }
+
+    console.log("no company assigned to table: "+table_id);
+
+}
+
 function get_day_string(day) {
 
     if ( day == 0 )

@@ -71,16 +71,48 @@ map.loadMaps = function() {
     var map_svgs = $("#map_svgs");
     
     for (var i = 0; i < MAP_METADATA_NAMES.length; i++) {
-        var elm = $("<div/>", {
-            id: "map_svg_" + i.toString(),
-            class: "map_svg",
-            appendTo: map_svgs
-        }).load("/static/maps/" + MAP_METADATA_NAMES[i]);
 
-        if (i > 0) {
-            elm.addClass('hidden');
-        }
+        (function(i){
+
+            var elm = $("<div/>", {
+                id: "map_svg_" + i.toString(),
+                class: "map_svg",
+                appendTo: map_svgs
+            }).load("/static/maps/" + MAP_METADATA_NAMES[i], null, function() { 
+
+                // add click event to each table on the map
+                var min_table_id = MAP_METADATA_STARTS[i];
+                var max_table_id = MAP_METADATA_STARTS[i+1]-1;
+
+                for (var j = min_table_id; j <= max_table_id; j++) {
+                    (function(j){
+
+                        var company = get_company_for_table(j);
+
+                        // POPOVER option in-p
+                        //$('#table'+j.toString()).attr('data-toggle', 'popover');
+                        //$('#table'+j.toString()).attr('data-content', company.name);
+                        //$('#table'+j.toString()).popover();
+
+                        // ALERT option disabled
+                        //$('#table'+j.toString()).click( function() {
+                        //    alert(company.name);
+                        //});
+
+                        // open company profile on click
+                        $('#table'+j.toString()).click( function() {
+                            view('load_company_profile', company.id);
+                        });
+
+                    }) (j);
+                }
+
+            });
+
+        }) (i);
+
     }
+
 };
 
 /*
