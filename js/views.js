@@ -4,7 +4,7 @@ var views = {
 
         // display the company name in the jumbotron div
         $("#company_profile_name").text(company.name);    // display the company description
-        $("#company_profile_description > h4").text("More about " + company.name);
+        $("#company_profile_description > h4").text("About " + company.name);
         $("#company_profile_description_text").text("Loading, please wait...");
 
         // Asynchronously load the profile description
@@ -40,7 +40,7 @@ var views = {
                         view("view_map_highlight_table", e.data);
                         e.preventDefault();
                     })
-                .html('<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>' +
+                .html('' +
                       get_map_string(map_id) +
                       '<span class="glyphicon glyphicon-menu-right pull-right"></span>');
         }

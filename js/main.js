@@ -28,10 +28,12 @@ $(document).ready(function() {
     });
     $("#info-button").click(function() {
         view('info_page', null);
-    });
+    });  
+
+    fill_maps_dropdown();
     $(".dropdown-menu > li > a").click(function() {
         view('switch_map', $(this).attr("value"));
-    });    
+    });      
 
     search_init();
 });

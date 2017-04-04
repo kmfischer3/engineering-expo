@@ -41,20 +41,58 @@ function get_day_string(day) {
 
 function get_map_string(map) {
 
-    if ( map == 0 )
-        return "Outdoor Map";
-    if ( map == 1 )
-        return "Engineering Hall (EH) 1st Floor";
-    if ( map == 2 )
-        return "Engineering Hall (EH) 2nd Floor";
-    if ( map == 3 )
-        return "Mechanical Engineering (ME) 1st Floor"; 
-    if ( map == 4 )
-        return "Mechanical Engineering (ME) 2st Floor";
-    if ( map == 5 )
-        return "Engineering Centers Building (ECB) 1st Floor";           
+    if ( window.innerWidth < 320 ) {
+
+        if ( map == 0 )
+            return "Outdoor Map";
+        if ( map == 1 )
+            return "Engineering Hall 1st Fl.";
+        if ( map == 2 )
+            return "Engineering Hall 2nd Fl.";
+        if ( map == 3 )
+            return "Mech. Engineering 1st Fl."; 
+        if ( map == 4 )
+            return "Mech. Engineering 2nd Fl.";
+        if ( map == 5 )
+            return "Engineering Centers Bldg.";
+
+    } else {
+
+        if ( map == 0 )
+            return "Outdoor Map";
+        if ( map == 1 )
+            return "Engineering Hall (EH) 1st Floor";
+        if ( map == 2 )
+            return "Engineering Hall (EH) 2nd Floor";
+        if ( map == 3 )
+            return "Mechanical Engineering (ME) 1st Floor"; 
+        if ( map == 4 )
+            return "Mechanical Engineering (ME) 2st Floor";
+        if ( map == 5 )
+            return "Engineering Centers Building (ECB) 1st Floor";
+
+    }           
 
     return "No Map Data";
+}
+
+// fills the dropdown with the correct id and text
+function fill_maps_dropdown() {
+
+    var dropdownHtml = "<button class=\"btn btn-info dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Change Map <span class=\"caret\"></span></button><ul class=\"dropdown-menu\">";
+
+    for (var i = 0; i < MAP_METADATA_NAMES.length; i++) {
+        var dropdown_item = "<li><a href=\"#\" value=\"" + 
+                                    i.toString() + "\">" + get_map_string(i) + 
+                                    "  <span class=\"badge\" id=\"badge" +
+                                    i.toString() + "\"></span></a></li>";
+        dropdownHtml = dropdownHtml + dropdown_item;
+    }
+
+    dropdownHtml = dropdownHtml + "</ul>";
+
+    //$('#change-map-dropdown').innerHTML = dropdownHtml;
+    document.getElementById('change-map-dropdown').innerHTML = dropdownHtml;
 }
 
 function get_filter_string() {
