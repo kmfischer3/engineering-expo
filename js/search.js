@@ -145,7 +145,11 @@ function filter_by_day(day) {
     return results;
 }
 
-function filter_exhibits(attribute_pack, day, defaultBehavior = true) {
+function filter_exhibits(attribute_pack, day, defaultBehavior) {
+
+    if (defaultBehavior == null) {
+        defaultBehavior = true;
+    }
 
     console.log({
         attribute_pack: attribute_pack,

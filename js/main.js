@@ -2,7 +2,7 @@
 $(document).ready(function() {
     //views.load_companies();
     var attribute_mask = encode_attribute_input();
-    var view_options = filter_exhibits(attribute_mask, DEFAULT_DAY_ID);
+    var view_options = filter_exhibits(attribute_mask, DEFAULT_DAY_ID, true);
     view_options.home = true;
     view("display_companies_list", view_options);
 
