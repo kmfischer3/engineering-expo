@@ -60,30 +60,30 @@ function get_map_string(map) {
         if ( map == 0 )
             return "Outdoor Map";
         if ( map == 1 )
-            return "Engineering Hall 1st Fl.";
+            return "Mech. Engineering 1st Fl.";
         if ( map == 2 )
-            return "Engineering Hall 2nd Fl.";
-        if ( map == 3 )
-            return "Mech. Engineering 1st Fl."; 
-        if ( map == 4 )
             return "Mech. Engineering 2nd Fl.";
+        if ( map == 3 )
+            return "Engineering Centers Bldg.";        
+        if ( map == 4 )
+            return "Engineering Hall 1st Fl.";
         if ( map == 5 )
-            return "Engineering Centers Bldg.";
+            return "Engineering Hall 2nd Fl.";
 
     } else {
 
         if ( map == 0 )
             return "Outdoor Map";
         if ( map == 1 )
-            return "Engineering Hall (EH) 1st Floor";
+            return "Mechanical Engineering (ME) 1st Floor";
         if ( map == 2 )
-            return "Engineering Hall (EH) 2nd Floor";
-        if ( map == 3 )
-            return "Mechanical Engineering (ME) 1st Floor"; 
-        if ( map == 4 )
             return "Mechanical Engineering (ME) 2st Floor";
+        if ( map == 3 )
+            return "Engineering Centers Building (ECB) 1st Floor";        
+        if ( map == 4 )
+            return "Engineering Hall (EH) 1st Floor";
         if ( map == 5 )
-            return "Engineering Centers Building (ECB) 1st Floor";
+            return "Engineering Hall (EH) 2nd Floor";
 
     }           
 
