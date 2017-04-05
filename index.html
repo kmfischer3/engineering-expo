@@ -20,6 +20,11 @@
     <script type="text/javascript">
       var _paq = _paq || [];
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      if(window.location.hash && window.location.hash == "#qr") {
+        _paq.push(['setCustomDimension', customDimensionId = 1, customDimensionValue = 'yes']);
+      } else {
+        _paq.push(['setCustomDimension', customDimensionId = 1, customDimensionValue = 'no']);
+      }
       _paq.push(['enableHeartBeatTimer', 30]);
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
