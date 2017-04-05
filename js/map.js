@@ -121,6 +121,13 @@ map.loadMaps = function() {
 map.showMap = function(map) {
     $(".map_svg").addClass("hidden");
     $("#map_svg_" + map.toString()).removeClass("hidden");
+
+    // show OSM license if outdoor map
+    if (map == 0)
+        $("#osm-license").removeClass("hidden");
+    else
+        $("#osm-license").addClass("hidden");
+
 };
 
 /*
