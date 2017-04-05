@@ -23,7 +23,7 @@ var views = {
         }
 
         // display the exhibit speaker time(s) string under the exhibit name
-        company.speakertimes = 'Friday at 11am';
+        //company.speakertimes = 'Friday at 11am';
         if ( company.speakertimes ) {
             $( "#company_profile_speakertimes" ).html('<small>'+company.speakertimes+'</small>');
         } else {
