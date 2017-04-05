@@ -8,6 +8,7 @@ function view(view_name, data) {
 
     $('#navbar-collapse-1').collapse('hide');
     views[view_name](data);
+    $('#sidebar').addClass('sidebar-hidden');
     $(window).scrollTop(0);
 }
 

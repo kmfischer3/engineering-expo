@@ -77,7 +77,7 @@ function get_map_string(map) {
         if ( map == 1 )
             return "Mechanical Engineering (ME) 1st Floor";
         if ( map == 2 )
-            return "Mechanical Engineering (ME) 2st Floor";
+            return "Mechanical Engineering (ME) 2nd Floor";
         if ( map == 3 )
             return "Engineering Centers Building (ECB) 1st Floor";        
         if ( map == 4 )
