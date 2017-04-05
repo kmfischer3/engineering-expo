@@ -93,7 +93,8 @@ function get_map_string(map) {
 // fills the dropdown with the correct id and text
 function fill_maps_dropdown() {
 
-    var dropdownHtml = "<button class=\"btn btn-info dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Change Map <span class=\"caret\"></span></button><ul class=\"dropdown-menu\">";
+    var dropdownHtml = "<button id=\"map-dropdown\" class=\"btn btn-default btn-block dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Change Map <span class=\"glyphicon glyphicon-menu-down pull-right\"></span></button><ul class=\"dropdown-menu\">";
+    
 
     for (var i = 0; i < MAP_METADATA_NAMES.length; i++) {
         var dropdown_item = "<li><a href=\"#\" value=\"" + 
