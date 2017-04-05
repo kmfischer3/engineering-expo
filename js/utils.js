@@ -27,6 +27,20 @@ function clear_badges(){
     $('.badge').text('');    
 }
 
+function get_company_for_table(table_id) {
+
+    for (var company_id in data) {
+        company = data[company_id];
+        for (var i = 0; i < company.tables.length; i ++) {
+            if (table_id == company.tables[i])
+                return company;
+        }
+    }
+
+    console.log("no company assigned to table: "+table_id);
+
+}
+
 function get_day_string(day) {
 
     if ( day == 0 )
@@ -79,7 +93,8 @@ function get_map_string(map) {
 // fills the dropdown with the correct id and text
 function fill_maps_dropdown() {
 
-    var dropdownHtml = "<button class=\"btn btn-info dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Change Map <span class=\"caret\"></span></button><ul class=\"dropdown-menu\">";
+    var dropdownHtml = "<button id=\"map-dropdown\" class=\"btn btn-default btn-block dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Change Map <span class=\"glyphicon glyphicon-menu-down pull-right\"></span></button><ul class=\"dropdown-menu\">";
+    
 
     for (var i = 0; i < MAP_METADATA_NAMES.length; i++) {
         var dropdown_item = "<li><a href=\"#\" value=\"" + 

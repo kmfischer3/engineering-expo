@@ -69,7 +69,7 @@
           <h4 id="company_list_view_header_filter_list"></h4>
         </div>
 
-        <a type="button" id="show_on_map_button" class="btn btn-block btn-info" href="#">View on Map <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+        <a type="button" id="show_on_map_button" class="btn btn-block btn-info" href="#">View on Map <span class="glyphicon glyphicon-menu-right pull-right"></span></a>
 
         <div id="company_list"> </div>
       </div><!-- /.company list view -->
@@ -176,20 +176,23 @@
 
         <div class="jumbotron">
           <h1 id="company_profile_name">Company Name</h1>
+          <h1 id="company_profile_speakertimes"></h1>         
         </div>
 
         <div class="content">
-          <div id="company_tags">
+          <div id="company_tags" class="pull-right">
           </div>
+          <br>
+          <div id="company_about_section">
+		  <h4>About:</h4>
+		  <div id="company_profile_description_text" class="list-group">
+		  </div>  
+		  <p><a id="company_profile_website" href="#">Visit Website</a></p>
+          </div>
+          <hr>
           
-          <h4><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Find Table:</h4>
+          <h4><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Find this Exhibit:</h4>
           <div id="company_profile_day_list" class="list-group">
-          </div>
-
-          <div id="company_profile_description" class="well">
-            <h4></h4>
-            <div id="company_profile_description_text"></div>
-            <a id="company_profile_website" href="#">Visit Website</a>
           </div>
 
         </div>
@@ -206,18 +209,6 @@
 
         <!-- change maps dropdown -->
         <div class="dropdown" id="change-map-dropdown">
-        <!--
-          <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Change Map
-            <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#" value="0">Outdoor Map <span class="badge" id="badge0"></span></a></li>
-            <li><a href="#" value="1">Engineering Hall (EH) 1st Floor <span class="badge" id="badge1"></span></a></li>
-            <li><a href="#" value="2">Engineering Hall (EH) 2nd Floor <span class="badge" id="badge2"></span></a></li>
-            <li><a href="#" value="3">Mechanical Engineering (ME) 1st Floor <span class="badge" id="badge3"></span></a></li>
-            <li><a href="#" value="4">Mechanical Engineering (ME) 2nd Floor <span class="badge" id="badge4"></span></a></li>
-            <li><a href="#" value="5">Engineering Centers Building (ECB) 1st Floor <span class="badge" id="badge5"></span></a></li>    
-          </ul>
-        -->
         </div> 
 
         <div id="map_svgs"></div>

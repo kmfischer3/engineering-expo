@@ -8,6 +8,8 @@ function Company(id, name, website, description, attributes, tables) {
 
     this.long_description = '';
     this.long_description_loaded = false;
+    
+    this.speakertimes = ''; //TODO export speakertimes
 }
 
 /**
