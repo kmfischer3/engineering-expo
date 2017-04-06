@@ -10,11 +10,12 @@ $(document).ready(function() {
     $("#search-button").click(function() {
         view('search_page', null);
     });
-    $("#home-button").click(function() {
+    $("#home-button").click(function(e) {
         view('display_companies_list', {
             day: DEFAULT_DAY_ID,
             company_ids: filter_by_day(DEFAULT_DAY_ID)
         });
+        e.preventDefault();
     });
     $("#list-button").click(function() {
         view('display_companies_list', {

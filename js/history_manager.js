@@ -5,6 +5,7 @@
 function view(view_name, data) {
     history_state = {view: view_name, data: data};
     history.pushState(history_state, "");
+    console.log("Pushing history state:", history_state);
 
     $('#navbar-collapse-1').collapse('hide');
     views[view_name](data);
@@ -17,7 +18,7 @@ function view(view_name, data) {
  * is triggered when the back button is pressed.
  */
 window.addEventListener("popstate", function(event) {
-    console.log(event);
+    console.log("Popping history state:", event);
     if (event.state === null) {
         return;
     }
