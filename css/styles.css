@@ -14,6 +14,16 @@
 #company_about_section {
   margin-top: 20px;
 }
+dd {
+  margin-left:25px;
+}
+.alert > h4 {
+  border-bottom: 1px solid #ebccd1;
+  padding-bottom: 10px;  
+}
+.page-content {
+  padding-left: 10px;
+}
 #map-dropdown {
   background: lightgray;
 }
