@@ -119,9 +119,11 @@ table td {
       border-right: 1px solid rgb(231, 231, 231);
       width: 200px;
     }
-
     #sidebar a {
       color: #5e5e5e;
+    }
+    #sidebar a:hover {
+      background-color: #eee;
     }
 
     #container {
