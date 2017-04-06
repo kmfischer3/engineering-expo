@@ -17,23 +17,27 @@ $(document).ready(function() {
         });
         e.preventDefault();
     });
-    $("#list-button").click(function() {
+    $("#list-button").click(function(e) {
         view('display_companies_list', {
             day: DEFAULT_DAY_ID,
             company_ids: filter_by_day(DEFAULT_DAY_ID)
         });
+        e.preventDefault();
     });
-    $("#maps-button").click(function() {
+    $("#maps-button").click(function(e) {
         clear_badges(); // this is the only view change that requires a badge reset
         view('maps_page', null);
+        e.preventDefault();
     });
-    $("#info-button").click(function() {
+    $("#info-button").click(function(e) {
         view('info_page', null);
+        e.preventDefault();
     });  
 
     fill_maps_dropdown();
-    $(".dropdown-menu > li > a").click(function() {
+    $(".dropdown-menu > li > a").click(function(e) {
         view('switch_map', $(this).attr("value"));
+        e.preventDefault();
     });      
 
     search_init();
