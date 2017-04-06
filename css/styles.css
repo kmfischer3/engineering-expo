@@ -9,7 +9,7 @@
   display: inline-block;
   text-align: left;
   width: 100%;
-  max-width: 800px;
+  /*max-width: 800px;*/
 }
 #company_about_section {
   margin-top: 20px;
@@ -135,7 +135,6 @@ table td {
     #container {
       left: 250px;
       max-width: calc(100% - 300px);
-      margin-top: 50px;
     }
 
 }
