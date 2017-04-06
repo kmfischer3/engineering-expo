@@ -7,7 +7,18 @@ map.resetTables = function(day) {
 	for (i = map.MIN_TABLE_NUMBER; i <= map.MAX_TABLE_NUMBER; i++) {
 	    var table = document.getElementById("table" + i.toString());
         console.assert(table != null, "Table with id=%i does not exist.", i);
-	    table.classList.remove("highlight");
+
+        // TODO: Internet Explorer does not support classList on SVG elements.
+        //   When it finally drops off the face of the planet, we can use the
+        //   classList code below instead of the className code, which restricts
+        //   future functionality.
+        if (table.classList === undefined) {
+            table.className = "";
+        } else {
+            // Code for real browsers.
+            table.classList.remove("highlight");
+        }
+        
 	}
 
     // TODO: update to hide companies across all days
@@ -19,8 +30,18 @@ map.highlightTables = function(day, table_ids) {
 
 	    var table = document.getElementById("table" + table_id.toString());
         console.assert(table != null, "Table with id=%i does not exist.", table_id);
-	    table.classList.add("highlight");
 
+        // TODO: Internet Explorer does not support classList on SVG elements.
+        //   When it finally drops off the face of the planet, we can use the
+        //   classList code below instead of the className code, which restricts
+        //   future functionality.
+        if (table.classList === undefined) {
+            table.className = "highlight";
+        } else {
+            // Code for real browsers.
+            table.classList.add("highlight");
+        }
+        
     });  
 
 };
