@@ -9,7 +9,6 @@
   display: inline-block;
   text-align: left;
   width: 100%;
-  /*max-width: 800px;*/
 }
 #company_about_section {
   margin-top: 20px;
@@ -105,27 +104,24 @@ table td {
   left: -150px !important;
 }
 
-@media (min-width: 768px) { /* medium: larger than 768 */
-
+/* Medium screens:
+ * Override mobile CSS with desktop/tablet CSS.
+ */
+@media (min-width: 768px) {
     .sidebar-hidden {
       display: block;
     }
 
     #menu-button {
-
       display: none;
-
     }
 
-
     #sidebar {
-
       left: 0px !important;
       display: block;
       background-color: #F8F8F8;
       border-right: 1px solid rgb(231, 231, 231);
       width: 200px;
-
     }
 
     #sidebar a {
@@ -136,11 +132,12 @@ table td {
       left: 250px;
       max-width: calc(100% - 300px);
     }
-
 }
 
-/* large screens:
- * start overriding medium screen rules to prevent overly-wide layouts
+/* Large screens:
+ * Start overriding medium screen rules to prevent overly-wide layouts.
+ * The left menu requires 300px of space, and we want a max content width of
+ *   1000 px, so we set the break point at 1300px.
  */
 @media (min-width: 1300px) {
     #container {
