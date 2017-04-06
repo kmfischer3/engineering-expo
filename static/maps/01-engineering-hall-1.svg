@@ -2,7 +2,6 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -88,11 +87,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.52002247"
-     inkscape:cx="546.46081"
-     inkscape:cy="196.65785"
+     inkscape:zoom="0.73542283"
+     inkscape:cx="242.42916"
+     inkscape:cy="353.99051"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer2"
      showgrid="false"
      fit-margin-top="10"
      fit-margin-left="10"
@@ -1652,13 +1651,20 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.43783379px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#0079a8;fill-opacity:1;stroke:none"
        x="652.5285"
-       y="371.91211"
+       y="369.91211"
        id="text9457-3-9"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="652.5285"
-         y="371.91211"
+         y="369.91211"
          id="tspan9461-6-2">INFO</tspan></text>
+    <rect
+       style="fill:#0079a8;fill-opacity:1;stroke:#0079a8;stroke-width:3.0999999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4532"
+       width="31.274525"
+       height="31.274525"
+       x="636.80762"
+       y="375.77899" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1668,7 +1674,7 @@
      transform="translate(5,5)"
      sodipodi:insensitive="true">
     <circle
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.9300001;fill:#7d7d7d;fill-opacity:1;stroke:#7d7d7d;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.87000002;fill:#7d7d7d;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
        id="table64"
        transform="matrix(1.4342635,0,0,1.4342635,199.13559,123.76099)"
        inkscape:label="#path4067-6"
@@ -1676,21 +1682,13 @@
        cy="72"
        r="10" />
     <circle
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#7d7d7d;fill-opacity:1;stroke:#7d7d7d;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#7d7d7d;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
        id="table63"
        transform="matrix(1.4342635,0,0,1.4342635,114.67209,164.29076)"
        inkscape:label="#path4067-6"
        cx="196"
        cy="72"
        r="10" />
-    <circle
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#0079a8;fill-opacity:1;stroke:#0079a8;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
-       id="info-table-2"
-       inkscape:label="#path4067-3"
-       cx="196"
-       cy="72"
-       r="10"
-       transform="matrix(1.4342635,0,0,1.4342635,370.96325,286.58204)" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1700,61 +1698,25 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:23.09085846px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.92363435px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="586.66412"
-       y="448.77402"
+       x="586.96777"
+       y="452.53525"
        id="text4511"
        sodipodi:linespacing="125%"
-       transform="scale(1.1194899,0.89326395)"><tspan
+       transform="scale(1.1194899,0.89326397)"><tspan
          sodipodi:role="line"
          id="tspan4513"
-         x="586.66412"
-         y="448.77402"
+         x="586.96777"
+         y="452.53525"
          style="stroke-width:0.92363435px">i</tspan></text>
-    <switch
-       transform="matrix(0.06227941,0,0,0.06227941,393.02025,264.33288)"
-       id="switch3"
-       style="fill:#000000;fill-opacity:1">
-      <foreignObject
-         y="0"
-         x="0"
-         height="1"
-         width="1"
-         requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
-        <i:pgfRef
-           xlink:href="#adobe_illustrator_pgf" />
-      </foreignObject>
-      <g
-         i:extraneous="self"
-         id="g5"
-         style="fill:#000000;fill-opacity:1">
-        <polygon
-           points="196.07,230.55 125.14,193.78 54.635,231.36 67.692,152.54 10.161,97.094 89.161,85.155 124.11,13.308 159.88,84.751 239.01,95.789 182.12,151.88 "
-           id="polygon7"
-           style="fill:#000000;fill-opacity:1;stroke:#010101" />
-      </g>
-    </switch>
-    <switch
-       transform="matrix(0.06227941,0,0,0.06227941,477.51533,224.05664)"
-       id="switch3-2"
-       style="fill:#000000;fill-opacity:1">
-      <foreignObject
-         y="0"
-         x="0"
-         height="1"
-         width="1"
-         requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
-        <i:pgfRef
-           xlink:href="#adobe_illustrator_pgf" />
-      </foreignObject>
-      <g
-         i:extraneous="self"
-         id="g5-9"
-         style="fill:#000000;fill-opacity:1">
-        <polygon
-           points="182.12,151.88 196.07,230.55 125.14,193.78 54.635,231.36 67.692,152.54 10.161,97.094 89.161,85.155 124.11,13.308 159.88,84.751 239.01,95.789 "
-           id="polygon7-1"
-           style="fill:#000000;fill-opacity:1;stroke:#010101" />
-      </g>
-    </switch>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.84173071;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 401.09847,264.264 2.54265,5.06782 5.62495,0.78095 -4.04723,3.98964 0.98881,5.58512 -5.03619,-2.60842 -5.00187,2.66538 0.92286,-5.59435 -4.0951,-3.93664 5.6162,-0.8506 z"
+       id="path4141"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.84173071;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 485.40444,223.5798 2.54265,5.06782 5.62495,0.78095 -4.04723,3.98964 0.98881,5.58512 -5.03619,-2.60842 -5.00187,2.66538 0.92286,-5.59435 -4.0951,-3.93664 5.6162,-0.8506 z"
+       id="path4141-3"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
