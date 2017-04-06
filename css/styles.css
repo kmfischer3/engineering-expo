@@ -77,27 +77,27 @@ table td {
   position: fixed;
   left: 0px;
   top: 50px;
-  width: 150px;
+  width: 200px;
   height: 100%;
-  background-color: #333;
   z-index: 3;
   font-size: medium;
   transition: left 0.5s;
   padding-top: 12px;
+
+  background-color: #333;
 }
 #sidebar a {
   color: lightgray;
   padding: 12px 40px;
 }
 #sidebar a:hover {
-  color: #777777;
-  background-color: #F8F8F8;
+  background-color: #3d3d3d;
 }
 #sidebar .separator {
     padding: 0px;
 }
 .sidebar-hidden {
-  left: -150px !important;
+  left: -200px !important;
 }
 
 /* Medium screens:
