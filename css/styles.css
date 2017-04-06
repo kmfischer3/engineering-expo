@@ -90,15 +90,18 @@ table td {
   z-index: 3;
   font-size: medium;
   transition: left 0.5s;
+  padding-top: 12px;
 }
 #sidebar a {
   color: lightgray;
-  padding-left: 40px;
-  padding-top: 20px;
+  padding: 12px 40px;
 }
 #sidebar a:hover {
   color: #777777;
   background-color: #F8F8F8;
+}
+#sidebar .separator {
+    padding: 0px;
 }
 .sidebar-hidden {
   left: -150px !important;
