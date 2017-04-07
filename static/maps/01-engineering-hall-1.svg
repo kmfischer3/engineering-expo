@@ -87,9 +87,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.73542283"
-     inkscape:cx="242.42916"
-     inkscape:cy="353.99051"
+     inkscape:zoom="0.36771142"
+     inkscape:cx="316.05225"
+     inkscape:cy="311.77659"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -97,11 +97,11 @@
      fit-margin-left="10"
      fit-margin-bottom="10"
      fit-margin-right="10"
-     inkscape:window-width="1301"
-     inkscape:window-height="744"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="710"
+     inkscape:window-height="373"
+     inkscape:window-x="432"
+     inkscape:window-y="149"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata7079">
     <rdf:RDF>
@@ -1627,25 +1627,20 @@
      style="display:inline"
      transform="translate(5,5)"
      sodipodi:insensitive="true">
-    <path
-       style="display:inline;fill:#ff0000;fill-opacity:1;stroke:#00a814;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1MstartYV)"
-       d="m 626.18137,427.9702 0,80"
-       id="path8117"
-       inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#00a814;fill-opacity:1;stroke:none"
-       x="629.66345"
-       y="526.59198"
+       x="527.16687"
+       y="508.59198"
        id="text9457-3"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan9459-7"
-         x="629.66345"
-         y="526.59198">Main Engineering Dr.</tspan><tspan
+         x="527.16687"
+         y="508.59198">Main Engineering Dr.</tspan><tspan
          sodipodi:role="line"
-         x="629.66345"
-         y="549.09198"
+         x="527.16687"
+         y="531.09198"
          id="tspan9461-6">Entrance</tspan></text>
     <text
        xml:space="preserve"
@@ -1665,6 +1660,21 @@
        height="31.274525"
        x="636.80762"
        y="375.77899" />
+    <g
+       id="g4188"
+       transform="matrix(0,-0.71614173,0.71614173,0,545.69825,491.38476)"
+       style="fill:none;fill-opacity:1;stroke:#00a814;stroke-width:6.4000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4182"
+         d="m 33.238281,72.746093 17.972657,0 0,-18.001478"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#00a814;stroke-width:6.4000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4186"
+         d="M 51.058594,72.679687 15.909903,38.928626"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#00a814;stroke-width:6.4000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
