@@ -22,6 +22,7 @@
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
       if(window.location.hash && window.location.hash == "#qr") {
         _paq.push(['setCustomDimension', customDimensionId = 1, customDimensionValue = 'yes']);
+        _paq.push(['trackEvent', 'open', 'qr']);
       } else {
         _paq.push(['setCustomDimension', customDimensionId = 1, customDimensionValue = 'no']);
       }
