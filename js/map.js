@@ -6,7 +6,11 @@ var map = {
 map.resetTables = function(day) {
 	for (i = map.MIN_TABLE_NUMBER; i <= map.MAX_TABLE_NUMBER; i++) {
 	    var table = document.getElementById("table" + i.toString());
-        console.assert(table != null, "Table with id=%i does not exist.", i);
+
+        if (table == null){
+            if ( confirm("Network error while loading maps. Would you like to refresh the page?") )
+                location.reload();
+        }
 
         // TODO: Internet Explorer does not support classList on SVG elements.
         //   When it finally drops off the face of the planet, we can use the
@@ -29,7 +33,11 @@ map.highlightTables = function(day, table_ids) {
     table_ids.forEach(function(table_id) {
 
 	    var table = document.getElementById("table" + table_id.toString());
-        console.assert(table != null, "Table with id=%i does not exist.", table_id);
+
+        if (table == null){
+            if ( confirm("Network error while loading maps. Would you like to refresh the page?") )
+                location.reload();
+        }        
 
         // TODO: Internet Explorer does not support classList on SVG elements.
         //   When it finally drops off the face of the planet, we can use the
